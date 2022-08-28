@@ -9,10 +9,12 @@
   </head>
   <body>
     <h2>로그인창</h2>
-    이메일<input type="text" id="id" /> 패스워드<input type="text" id="pw" />
-    <button onclick="loginBtn()">login</button>
+    아이디<input type="text" id="id" /> 패스워드<input type="text" id="pw" />
+    <button onclick="loginBtn()">login</button><br />
+    <button onclick="findPw()">비밀번호 찾기</button>
   </body>
   <script>
+    // 로그인 버튼을 눌렀을 때
     function loginBtn() {
       $.ajax({
         url: "/login",
@@ -34,6 +36,17 @@
           }
         },
       });
+    }
+
+    // 비밀번호 찾기 버튼을 눌렀을 때
+    function findPw() {
+      $.ajax({
+        url : "/findPw",
+        type : "post",
+        data : {
+          email : email.value
+        }, success :
+      })
     }
   </script>
 </html>
