@@ -1,4 +1,4 @@
-// 노드메일러 설정하기!ㄴ
+// 노드메일러 설정하기!
 const mailer = require("nodemailer");
 const mail = require("../config/mail");
 

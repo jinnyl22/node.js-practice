@@ -287,9 +287,10 @@ app.post("/findPw", (req, res) => {
     req.session.emailToken,
     process.env.ET_SECRET_KEY,
     (err, result) => {
-      if(err) res.send("fail")
-      else{
-        if(req.session.randomNum == num) 
+      if (err) res.send("fail");
+      else {
+        if (req.session.randomNum == num) {
+        }
       }
     }
   );
